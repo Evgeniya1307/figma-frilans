@@ -27,29 +27,86 @@ body {
 
 /*контейнер который уходит в право*/
 .container-right {
-    padding-left: calc( (100% - var(--container-width))/ 2 + var(--container-padding)); /*calc((100% - 1270px)/2 + 15px) получу отступы которые должны быть по краям*/
+    padding-left: calc(
+        (100% - var(--container-width)) / 2 + var(--container-padding)
+    ); /*calc((100% - 1270px)/2 + 15px) получу отступы которые должны быть по краям*/
 }
 
 .container-left {
-    padding-right: calc( (100% - var(--container-width))/ 2 + var(--container-padding));
+    padding-right: calc((100% - var(--container-width)) / 2 + var(--container-padding));
 }
 
 .block {
     height: 200px;
-    background-color: blue;
+    background-color: rgb(166, 166, 230);
 }
-
 
 /*Header*/
 
-.header{
+.header {
     position: relative; /*шапка родитель*/
     min-height: 940px;
-    background: linear-gradient(132.05deg, #428E5F -17.38%, #112120 78.4%), #204434; /*фон заливки*/
+    padding-top: 62px; /*от логина до вверха*/
+    background: linear-gradient(132.05deg, #428e5f -17.38%, #112120 78.4%), #204434; /*фон заливки*/
+    color: #fff;
 }
 
+.header a{
+  color: #fff;  
+}
+
+
 /*пвседоэлементы*/
-.header::after{
-content: "";
-position: absolute;
+.header::after {
+    content: "";
+    position: absolute;
+    left: 0; /*нижний левый угол*/
+    bottom: 0;
+    width: 100%;
+    height: 96px;
+
+    background-image: url("./../img/header/header-bottom.svg");
+    background-size: 100%; /*не дублировался и на всю ширину растянулся*/
+}
+
+.header__top {
+    margin-bottom: 93px;
+}
+
+.header__content {
+    max-width: 592px;
+}
+
+/*nav */
+
+.nav {
+    display: flex;
+    justify-content: space-between; /*равномерно распределяются по всей строке. Первый и последний элемент прижимаются к соответствующим краям контейнера*/
+    column-gap: 80px; /*отступ.вплотную чтобы не подходили*/
+}
+
+.nav__logo {
+}
+
+.block {
+}
+
+.nav__list {
+display: flex;
+column-gap: 80px;/*между ними отступы*/
+}
+
+.nav__login {
+}
+
+/*Logo*/
+
+.logo {
+    font-size: 20px;
+    color: #ffffff;
+    font-weight: 700;
+}
+
+.logo a{
+    color:inherit; /*ссылки внутри лого такие же как у лого*/
 }
