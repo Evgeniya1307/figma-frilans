@@ -3,7 +3,7 @@
 
 /*переменные могу переиспользовать*/
 :root {
---container-widtch:1270px;/*ширина контейнера*/
+--container-widtch:1270px;/*ширина контейнера было 1240 взяла с запасом бо бокам*/
 --container-padding:15px;
 --secondary: rgba(15, 31, 28, 0.5);
 }
@@ -20,7 +20,10 @@ body {
 }
 
 
-/*контейнер по стнадартной ширине*/
+/*контейнер по стнадартной ширине проекта*/
 .container{
 max-width: var(--container-widtch);
+padding: 0 var(--container-padding); /*сверху снизу 0, слева справа беру в переменной 15px*/
+margin:0 auto; /*по центру*/
+
 }
