@@ -3,9 +3,9 @@
 
 /*переменные могу переиспользовать*/
 :root {
---container-widtch:1270px;/*ширина контейнера было 1240 взяла с запасом бо бокам*/
---container-padding:15px;
---secondary: rgba(15, 31, 28, 0.5);
+    --container-width: 1270px; /*ширина контейнера было 1240 взяла с запасом бо бокам*/
+    --container-padding: 15px;
+    --secondary: rgba(15, 31, 28, 0.5);
 }
 
 body {
@@ -14,16 +14,42 @@ body {
     color: #0f1f1c;
 }
 
-
-.none{
+.none {
     display: none !important; /*скрывать какие то секции*/
 }
 
-
 /*контейнер по стнадартной ширине проекта*/
-.container{
-max-width: var(--container-widtch);
-padding: 0 var(--container-padding); /*сверху снизу 0, слева справа беру в переменной 15px*/
-margin:0 auto; /*по центру*/
+.container {
+    max-width: var(--container-width);
+    padding: 0 var(--container-padding); /*сверху снизу 0, слева справа беру в переменной 15px*/
+    margin: 0 auto; /*по центру*/
+}
 
+/*контейнер который уходит в право*/
+.container-right {
+    padding-left: calc( (100% - var(--container-width))/ 2 + var(--container-padding)); /*calc((100% - 1270px)/2 + 15px) получу отступы которые должны быть по краям*/
+}
+
+.container-left {
+    padding-right: calc( (100% - var(--container-width))/ 2 + var(--container-padding));
+}
+
+.block {
+    height: 200px;
+    background-color: blue;
+}
+
+
+/*Header*/
+
+.header{
+    position: relative; /*шапка родитель*/
+    min-height: 940px;
+    background: linear-gradient(132.05deg, #428E5F -17.38%, #112120 78.4%), #204434; /*фон заливки*/
+}
+
+/*пвседоэлементы*/
+.header::after{
+content: "";
+position: absolute;
 }
