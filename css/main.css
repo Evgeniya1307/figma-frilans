@@ -118,7 +118,9 @@ body {
 
 .nav__login {
     display: flex;
+    align-items: center;
     column-gap: 25px;
+    
     font-size: 15px;
     font-weight: 500;
     line-height: 23px;
@@ -136,8 +138,47 @@ body {
     color: inherit; /*ссылки внутри лого такие же как у лого*/
 }
 
-
 /*button кнопка логин*/
-.btn{
-    
+.btn {
+    display: inline-block; /*по умолчанию ссылка инлайн элемент*/
+    padding: 13px 44px; /*низ вверх 13 права лево 44*/
+
+    font-size: 15px;
+    font-weight: 500;
+    color: #ffffff;
+
+    background: linear-gradient(129.54deg, #ff7b4e 15.57%, #ff584e 95.03%), #ffffff;
+    border-radius: 100px;
+}
+
+.btn:hover{
+    color: rgb(221, 239, 66);
+    transition: color 0.2s ease-in;/*будет меняться плавно*/
+}
+
+.btn:active{ /*при нажатии утапливалась вниз эффект прожатия*/
+position: relative;
+top: 1px;
+}
+
+/*header content*/
+.header__badge {
+    font-size: 18px; /*текст внутри подложки*/
+    font-weight: 500;
+    width:227px;
+    height:50px;
+    align-items: center;
+    padding-left: 100px;
+    background: rgba(255, 255, 255, 0.25);
+    border-radius: 15px;
+   
+}
+.header__title {
+
+}
+.header__text {
+
+}
+.header__btn {
+
 }
