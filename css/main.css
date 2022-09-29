@@ -44,6 +44,7 @@ body {
 /*Header*/
 
 .header {
+    overflow: hidden;/*поведение для переполнения элемента */
     position: relative; /*шапка родитель*/
     min-height: 940px;
     padding-top: 62px; /*от логина до вверха*/
@@ -69,11 +70,33 @@ body {
 }
 
 .header__top {
-    margin-bottom: 93px;
+    margin-bottom: 86px;
+}
+
+.header__row {
+    display: flex;
 }
 
 .header__content {
     max-width: 592px;
+	position: relative;
+	z-index: 1; /*определяет положение позиционированного элемента*/
+}
+
+.header__img {
+position: relative;
+flex-grow: 1; /*возьмет оставшееся пространство и разделит его на общее количество значений*/
+}
+
+.header__img img {
+    position: absolute;/*чтобы не сжимала остальные блоки*/
+    top: -181px;
+    right: -87px; /*загнала в верхний правый угол*/
+   
+    max-width: unset; /*не задано*/
+    width: 894px;
+    height: 940px;
+    pointer-events: none; /*none запрещает все параметры щелчка,*/
 }
 
 /*nav */
@@ -120,7 +143,7 @@ body {
     display: flex;
     align-items: center;
     column-gap: 25px;
-    
+
     font-size: 15px;
     font-weight: 500;
     line-height: 23px;
@@ -151,34 +174,66 @@ body {
     border-radius: 100px;
 }
 
-.btn:hover{
+.btn:hover {
     color: rgb(221, 239, 66);
-    transition: color 0.2s ease-in;/*будет меняться плавно*/
+    transition: color 0.2s ease-in; /*будет меняться плавно*/
 }
 
-.btn:active{ /*при нажатии утапливалась вниз эффект прожатия*/
-position: relative;
-top: 1px;
+.btn:active {
+    /*при нажатии утапливалась вниз эффект прожатия*/
+    position: relative;
+    top: 1px;
 }
 
 /*header content*/
 .header__badge {
+    margin-bottom: 7px;
+    display: inline-block; /*занимал место столько сколько в контенте*/
+    padding: 11px 30px; /*низ вверх,лево право*/
     font-size: 18px; /*текст внутри подложки*/
     font-weight: 500;
-    width:227px;
-    height:50px;
+    width: 227px;
+    height: 50px;
     align-items: center;
-    padding-left: 100px;
+
     background: rgba(255, 255, 255, 0.25);
     border-radius: 15px;
-   
 }
 .header__title {
+    width: 592px;
+    height: 249px;
+    margin-bottom: 30px;
+    font-size: 55px;
+    font-weight: 400;
 
 }
 .header__text {
-
+    margin-bottom: 68px;
+    font-size: 25px;
+    font-weight: 700;
+    line-height: 38px;
+    color: #ffffff;
+    opacity: 0.5; /*не насыщенный цвет полупрозрачный*/
 }
 .header__btn {
+    display: inline-block;
+    padding: 27px 48px;
+    color: #fefefe;
 
+    background: linear-gradient(129.54deg, #ff7b4e 15.57%, #ff584e 95.03%);
+    border-radius: 27px;
+
+    font-size: 25px;
+    font-weight: 600;
+}
+
+.header__btn:hover {
+    color: rgb(221, 239, 66);
+    transition: color 0.2s ease-in; /*будет меняться плавно*/
+}
+
+.header__btn:active {
+    /*при нажатии утапливалась вниз эффект прожатия*/
+    position: relative;
+    top: 1px;
 }
