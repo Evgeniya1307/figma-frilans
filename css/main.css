@@ -51,10 +51,9 @@ body {
     color: #fff;
 }
 
-.header a{
-  color: #fff;  
+.header a {
+    color: #fff;
 }
-
 
 /*пвседоэлементы*/
 .header::after {
@@ -86,30 +85,43 @@ body {
     column-gap: 80px; /*отступ.вплотную чтобы не подходили*/
 }
 
-.nav__logo {
-}
-
 .block {
 }
 
 .nav__list {
-display: flex;
-column-gap: 80px;/*между ними отступы*/
-font-size: 15px;
-font-weight: 500;
+    display: flex;
+    column-gap: 80px; /*между ними отступы*/
+    font-size: 15px;
+    font-weight: 500;
 }
 
-.nav__list a.active::after, /*псевдоэлементы*/
+.nav__list a {
+    position: relative; /*родитель ссылка находится относительно своего исходного положения в родительском элементе*/
+}
+
+.nav__list a.active::after, /*псевдоэлементы активная*/
 .nav__list a:hover::after {
-    content: "";/*чтобы отображался*/
+    /*при наведении*/
+    content: ""; /*чтобы отображался*/
 
     position: absolute; /*относительно этой ссылки будет*/
+    left: 0;
+    right: 10px;
+    bottom: -6px;
 
     display: block;
-    width: 50px;
-    height: 10px;
-    background-color: #C4C4C4; /*полоска под Home*/
+    width: 35px;
+    height: 4px;
+    background-color: #c4c4c4; /*полоска под Home*/
+    border-radius: 50px;
+}
 
+.nav__login {
+    display: flex;
+    column-gap: 25px;
+    font-size: 15px;
+    font-weight: 500;
+    line-height: 23px;
 }
 
 /*Logo*/
@@ -120,6 +132,12 @@ font-weight: 500;
     font-weight: 700;
 }
 
-.logo a{
-    color:inherit; /*ссылки внутри лого такие же как у лого*/
+.logo a {
+    color: inherit; /*ссылки внутри лого такие же как у лого*/
+}
+
+
+/*button кнопка логин*/
+.btn{
+    
 }
