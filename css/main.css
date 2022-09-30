@@ -44,10 +44,10 @@ body {
 /*Header*/
 
 .header {
-    overflow: hidden;/*поведение для переполнения элемента */
+    overflow: hidden; /*поведение для переполнения элемента */
     position: relative; /*шапка родитель*/
     min-height: 940px;
-    padding-top: 62px; /*от логина до вверха*/
+    padding-top: 44px; /*от логина до вверха*/
     background: linear-gradient(132.05deg, #428e5f -17.38%, #112120 78.4%), #204434; /*фон заливки*/
     color: #fff;
 }
@@ -79,20 +79,21 @@ body {
 
 .header__content {
     max-width: 592px;
-	position: relative;
-	z-index: 1; /*определяет положение позиционированного элемента*/
+    position: relative;
+    z-index: 1; /*определяет положение позиционированного элемента*/
 }
 
 .header__img {
-position: relative;
-flex-grow: 1; /*возьмет оставшееся пространство и разделит его на общее количество значений*/
+    position: relative;
+    flex-grow: 1; /*возьмет оставшееся пространство и разделит его на общее количество значений*/
 }
 
 .header__img img {
-    position: absolute;/*чтобы не сжимала остальные блоки*/
+    position: absolute; /*чтобы не сжимала остальные блоки*/
+
     top: -181px;
     right: -87px; /*загнала в верхний правый угол*/
-   
+
     max-width: unset; /*не задано*/
     width: 894px;
     height: 940px;
@@ -106,9 +107,6 @@ flex-grow: 1; /*возьмет оставшееся пространство и 
     justify-content: space-between; /*равномерно распределяются по всей строке. Первый и последний элемент прижимаются к соответствующим краям контейнера*/
     align-items: center; /*выровняла*/
     column-gap: 80px; /*отступ.вплотную чтобы не подходили*/
-}
-
-.block {
 }
 
 .nav__list {
@@ -146,7 +144,6 @@ flex-grow: 1; /*возьмет оставшееся пространство и 
 
     font-size: 15px;
     font-weight: 500;
-    line-height: 23px;
 }
 
 /*Logo*/
@@ -185,36 +182,28 @@ flex-grow: 1; /*возьмет оставшееся пространство и 
     top: 1px;
 }
 
-/*header content*/
+/*Header content*/
 .header__badge {
     margin-bottom: 7px;
     display: inline-block; /*занимал место столько сколько в контенте*/
     padding: 11px 30px; /*низ вверх,лево право*/
     font-size: 18px; /*текст внутри подложки*/
     font-weight: 500;
-    width: 227px;
-    height: 50px;
-    align-items: center;
 
     background: rgba(255, 255, 255, 0.25);
     border-radius: 15px;
 }
 .header__title {
-    width: 592px;
-    height: 249px;
     margin-bottom: 30px;
     font-size: 55px;
-    font-weight: 400;
-
 }
 .header__text {
     margin-bottom: 68px;
     font-size: 25px;
     font-weight: 700;
-    line-height: 38px;
-    color: #ffffff;
-    opacity: 0.5; /*не насыщенный цвет полупрозрачный*/
+    color: rgba(255, 255, 255, 0.5);
 }
+
 .header__btn {
     display: inline-block;
     padding: 27px 48px;
@@ -236,4 +225,41 @@ flex-grow: 1; /*возьмет оставшееся пространство и 
     /*при нажатии утапливалась вниз эффект прожатия*/
     position: relative;
     top: 1px;
+}
+
+/*Destinations делаю c Choice Of*/
+.destanations {
+    padding: 96px 0 100px;
+}
+
+.destinations__row {
+    display: flex;
+    column-gap: 50px; /*от текста до картинки(слайдера) по горизонтали*/
+}
+.destinations__content {
+    max-width: 456px; /*ограничен по ширине*/
+}
+.block {
+}
+.destinations__slider {
+    width: 1110px; /*всех 3 картинок слайдеров*/
+    flex-shrink: 0; /*чтобы не уменьшался*/
+}
+
+.destanations__title {
+    /*Destinations*/
+    margin-bottom: 15px; /*от заголовка вниз*/
+    font-size: 55px;
+    font-weight: 600;
+}
+
+.destanations__title span { /*Choice Of */
+    font-size: 30px;
+}
+
+.destanations__text {
+    margin-bottom: 60px;/*от текста до кнопки*/
+}
+
+.btn {
 }
