@@ -288,3 +288,18 @@ body {
     position: relative;
     top: 1px;
 }
+
+/*Slider*/
+.slider {
+
+}
+.slider__item {
+width: 335px;
+height: 402px;
+object-fit: cover; /*корректное масштабирование картинки внутри тэга img*/
+}
+
+.slider__item.active{
+    width: 380px;
+    height: 456px;
+}
