@@ -297,9 +297,11 @@ body {
 width: 335px;
 height: 402px;
 object-fit: cover; /*корректное масштабирование картинки внутри тэга img*/
+border-radius: 35px;
 }
 
 .slider__item.active{
     width: 380px;
     height: 456px;
+    border-radius: 35px;
 }
