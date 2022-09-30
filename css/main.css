@@ -293,13 +293,16 @@ body {
 
 }
 .slider__item {
+    margin-top: 27px;/*разница картинки в высоте*/
 width: 335px;
 height: 402px;
 object-fit: cover; /*корректное масштабирование картинки внутри тэга img*/
 border-radius: 35px;
+transition: 0.2s ease-in;/*плавно менялись*/
 }
 
-.slider .centr .slider__item{ /*внутри слайдера есть блок центр и там есть клас слайдер айтем */
+.slider .center .slider__item{ /*внутри слайдера есть блок центр и там есть клас слайдер айтем */
+    margin-top: 0;
     width: 380px;
     height: 456px;
     border-radius: 35px;
