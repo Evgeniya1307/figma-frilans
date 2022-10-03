@@ -313,5 +313,19 @@ body {
 
 /*для кнопок вперёд назад*/
 .slider__btn{
+display: block;
+width:68px;
+height:68px;
+border-radius: 50%;
 
+
+display: flex;
+align-items: center;
+
+background: linear-gradient(129.54deg, #ff7b4e 15.57%, #ff584e 95.03%);
+}
+
+/*кнопка назад*/
+.slider__btn--prev{
+    padding-left: 26px;
 }
