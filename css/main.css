@@ -228,8 +228,8 @@ body {
 }
 
 /*Destinations делаю c Choice Of*/
-.destanations {
-    overflow-x: hidden;/*указывает, следует ли обрезать содержимое, добавить полосу прокрутки или отобразить переполнение содержимого блочного элемента, когда оно переполняется по левому и правому краям.*/
+.destinations {
+    overflow-x: hidden; /*указывает, следует ли обрезать содержимое, добавить полосу прокрутки или отобразить переполнение содержимого блочного элемента, когда оно переполняется по левому и правому краям.*/
     padding: 96px 0 100px;
 }
 
@@ -246,64 +246,72 @@ body {
     flex-shrink: 0; /*чтобы не уменьшался*/
 }
 
-.destanations__title {
+.destinations__title {
     /*Destinations*/
     margin-bottom: 15px; /*от заголовка вниз*/
     font-size: 55px;
     font-weight: 600;
 }
 
-.destanations__title span {
+.destinations__title span {
     /*Choice Of */
     font-size: 30px;
+    left: 100px;
 }
 
-.destanations__text {
+.destinations__text {
     margin-bottom: 60px; /*от текста до кнопки*/
     font-size: 25px;
     font-weight: 500;
     color: var(--secondary); /*полупозраченый до этого есть в переменной*/
 }
 
-.btn {
+.destinations__btn {
     display: inline-block;
     padding: 25px 45px;
-    color:#FEFEFE;
+    color: #fefefe;
 
     background: linear-gradient(129.54deg, #ff7b4e 15.57%, #ff584e 95.03%);
     border-radius: 27px;
+   
 
     font-size: 20px;
     font-weight: 600;
 }
 
-.btn:hover{
-    color: rgb(221, 239, 66);
+.destinations__btn:hover {
+    color: rgb(164, 180, 28);
     transition: color 0.2s ease-in; /*будет меняться плавно*/
 }
 
-.btn:active{
+.destinations__btn:active {
     /*при нажатии утапливалась вниз эффект прожатия*/
     position: relative;
     top: 1px;
 }
 
+
 /*Slider*/
 .slider {
-
 }
 .slider__item {
-    margin-top: 27px;/*разница картинки в высоте*/
-width: 335px;
-height: 402px;
-object-fit: cover; /*корректное масштабирование картинки внутри тэга img*/
-border-radius: 35px;
-transition: 0.2s ease-in;/*плавно менялись*/
+    margin-top: 27px; /*разница картинки в высоте*/
+    width: 335px;
+    height: 402px;
+    object-fit: cover; /*корректное масштабирование картинки внутри тэга img*/
+    border-radius: 35px;
+    transition: 0.2s ease-in; /*плавно менялись*/
 }
 
-.slider .center .slider__item{ /*внутри слайдера есть блок центр и там есть клас слайдер айтем */
+.slider .center .slider__item {
+    /*внутри слайдера есть блок центр и там есть клас слайдер айтем */
     margin-top: 0;
     width: 380px;
     height: 456px;
     border-radius: 35px;
+}
+
+/*для кнопок вперёд назад*/
+.slider__btn{
+
 }
