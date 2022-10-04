@@ -155,7 +155,11 @@ body {
 }
 
 .logo a {
-    color: inherit; /*ссылки внутри лого такие же как у лого*/
+    color: inherit; /*насследовать цвет*/
+}
+
+.logo--footer{
+    color: #ff7b4e;
 }
 
 /*button кнопка логин*/
