@@ -273,7 +273,6 @@ body {
 
     background: linear-gradient(129.54deg, #ff7b4e 15.57%, #ff584e 95.03%);
     border-radius: 27px;
-   
 
     font-size: 20px;
     font-weight: 600;
@@ -290,11 +289,10 @@ body {
     top: 1px;
 }
 
-
 /*Slider*/
 .slider {
-position: relative;/*сдвигает элемент относительно его обычного положения*/
-height: 456px;/*сд-ла фиксированную высоту*/
+    position: relative; /*сдвигает элемент относительно его обычного положения*/
+    height: 456px; /*сд-ла фиксированную высоту*/
 }
 .slider__item {
     margin-top: 27px; /*разница картинки в высоте*/
@@ -314,37 +312,34 @@ height: 456px;/*сд-ла фиксированную высоту*/
 }
 
 /*для кнопок вперёд назад*/
-.slider__btn{
-    position: absolute;/* Элемент исчезает с того места, где он должен быть и позиционируется заново. Остальные элементы, располагаются так, как будто этого элемента никогда не было*/
+.slider__btn {
+    position: absolute; /* Элемент исчезает с того места, где он должен быть и позиционируется заново. Остальные элементы, располагаются так, как будто этого элемента никогда не было*/
     top: 50%;
-    transform: translateY(-50%)/*от своей высоты, чтобы вертиккально по центру*/;
-    z-index: 9;/*определяет положение позиционированного элемента и его дочерних элементов*/
+    transform: translateY(-50%) /*от своей высоты, чтобы вертиккально по центру*/;
+    z-index: 9; /*определяет положение позиционированного элемента и его дочерних элементов*/
 
+    display: block;
+    width: 68px;
+    height: 68px;
+    border-radius: 50%;
 
+    display: flex;
+    align-items: center;
 
-display: block;
-width:68px;
-height:68px;
-border-radius: 50%;
-
-
-display: flex;
-align-items: center;
-
-background: linear-gradient(129.54deg, #ff7b4e 15.57%, #ff584e 95.03%);
+    background: linear-gradient(129.54deg, #ff7b4e 15.57%, #ff584e 95.03%);
 }
 
 /*кнопка назад*/
-.slider__btn--prev{
+.slider__btn--prev {
     left: -27px;
     padding-left: 26px;
-    justify-content: flex-start;/*элементы упаковываются по направлению к стартовой линии.*/
+    justify-content: flex-start; /*элементы упаковываются по направлению к стартовой линии.*/
 }
 
-.slider__btn--next{
+.slider__btn--next {
     right: -27px;
     padding-right: 26px;
-    justify-content: flex-end;/*элементы упаковываются ближе к конечной строке.*/
+    justify-content: flex-end; /*элементы упаковываются ближе к конечной строке.*/
 }
 
 /*Customers*/
@@ -353,13 +348,13 @@ background: linear-gradient(129.54deg, #ff7b4e 15.57%, #ff584e 95.03%);
 }
 .customers__row {
     display: flex;
-column-gap: 68px;
+    column-gap: 68px;
 }
 .customers__img {
-max-width: 478px;
+    max-width: 478px;
 }
 
-.customers__img img{
+.customers__img img {
     border-radius: 60px;
 }
 .customers__content {
@@ -367,14 +362,14 @@ max-width: 478px;
 .customers__title {
     margin-bottom: 35px;
     font-size: 45px;
-    color: #0F1F1C;
+    color: #0f1f1c;
     font-weight: 500;
     line-height: 68px;
 }
 
 /*Review*/
-.review{
-    max-width: 490px;/*ограничения*/
+.review {
+    max-width: 490px; /*ограничения*/
 }
 .review__client {
     display: flex;
@@ -383,14 +378,13 @@ max-width: 478px;
     margin-bottom: 37px; /*от клиента до текста*/
 }
 .review__client-avatar {
-overflow: hidden;/*невыходила картинка*/
+    overflow: hidden; /*невыходила картинка*/
     width: 134px;
-height: 134px;
-border-radius: 50%;
-background-color: #FF794E;
+    height: 134px;
+    border-radius: 50%;
+    background-color: #ff794e;
 }
 .review__client-desc {
-
 }
 .review__client-desc-name {
     font-size: 33px;
@@ -409,25 +403,90 @@ background-color: #FF794E;
     line-height: 33px;
 }
 .review__rating {
-border-radius: 2px;
-
+    border-radius: 2px;
 }
-
 
 /*Cta*/
 
 .cta {
-    padding: 100px 0 ;
+    padding: 100px 0;
 }
 .cta__plate {
+    position: relative;
     display: flex;
-    flex-direction: column;/*в колонку*
-border-radius: 60px;
-background-color: #FFFFFF;
+    flex-direction: column; /*в колонку*/
+    align-items: center;
+    justify-content: center;
+    min-height: 580px;
+    background-color: #fff;
+    border-radius: 60px;
+    padding: 40px 15px;
 }
+
+.cta__plate::before,
+.cta__plate::after {
+    position: absolute;
+    width: 63px;
+    height: 83px;
+    content: "";
+}
+
+.cta__plate::before {
+    top: 74px;
+    right: 80px;
+    background-image: url(../img/cta/cta-el-01.svg);
+}
+.cta__plate::after {
+    left: 63px;
+    bottom: 83px;
+    background-image: url(../img/cta/cta-el-02.svg);
+}
+
 .cta__title {
+    font-weight: 500;
+    font-size: 45px;
+    line-height: 68px;
+    margin-bottom: 30px;
 }
 .cta__text {
+    font-weight: 400;
+    font-size: 30px;
+    line-height: 45px;
+    color: var(--secondary);
+    margin-bottom: 60px;
 }
-.cta__button {
+
+/*Subscribe*/
+.subscribe {
+    padding: 35px 50px;
 }
+
+.subscribe__content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+.subscribe__title {
+    max-width: 494px;
+    font-weight: 600;
+    font-size: 55px;
+    line-height: 82px;
+    margin-bottom: 60px;
+}
+.subscribe-form {
+    padding: 12px 15px 12px 46px;
+    background-color: #fff;
+    border-radius: 35px;
+    display: flex;
+    column-gap: 20px;
+}
+
+.subscribe-form-input {
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 36px;
+  }
+  .subscribe-form-input::placeholder {
+    color: var(--secondary);
+  }
