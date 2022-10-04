@@ -294,6 +294,7 @@ body {
 /*Slider*/
 .slider {
 position: relative;/*сдвигает элемент относительно его обычного положения*/
+height: 456px;/*сд-ла фиксированную высоту*/
 }
 .slider__item {
     margin-top: 27px; /*разница картинки в высоте*/
@@ -344,4 +345,89 @@ background: linear-gradient(129.54deg, #ff7b4e 15.57%, #ff584e 95.03%);
     right: -27px;
     padding-right: 26px;
     justify-content: flex-end;/*элементы упаковываются ближе к конечной строке.*/
+}
+
+/*Customers*/
+.customers {
+    padding: 100px 0 133px;
+}
+.customers__row {
+    display: flex;
+column-gap: 68px;
+}
+.customers__img {
+max-width: 478px;
+}
+
+.customers__img img{
+    border-radius: 60px;
+}
+.customers__content {
+}
+.customers__title {
+    margin-bottom: 35px;
+    font-size: 45px;
+    color: #0F1F1C;
+    font-weight: 500;
+    line-height: 68px;
+}
+
+/*Review*/
+.review{
+    max-width: 490px;/*ограничения*/
+}
+.review__client {
+    display: flex;
+    align-items: center;
+    column-gap: 33px;
+    margin-bottom: 37px; /*от клиента до текста*/
+}
+.review__client-avatar {
+overflow: hidden;/*невыходила картинка*/
+    width: 134px;
+height: 134px;
+border-radius: 50%;
+background-color: #FF794E;
+}
+.review__client-desc {
+
+}
+.review__client-desc-name {
+    font-size: 33px;
+    font-weight: 500;
+    margin-bottom: 10px;
+}
+.review__client-desc-country {
+    font-style: 25px;
+    color: var(--secondary);
+}
+.review__text {
+    margin-bottom: 30px;
+    font-size: 22px;
+    font-weight: 500;
+    color: var(--secondary);
+    line-height: 33px;
+}
+.review__rating {
+border-radius: 2px;
+
+}
+
+
+/*Cta*/
+
+.cta {
+    padding: 100px 0 ;
+}
+.cta__plate {
+    display: flex;
+    flex-direction: column;/*в колонку*
+border-radius: 60px;
+background-color: #FFFFFF;
+}
+.cta__title {
+}
+.cta__text {
+}
+.cta__button {
 }
