@@ -3,14 +3,14 @@
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /> 
     <title>Frilans Figma proect</title>
     <link rel="stylesheet" href="./css/main.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" integrity="sha512-tS3S5qG0BlhnQROyJXvNjeEM4UpMXHrQfTGmbQ1gKmelCxlSEBUaxhRBj/EFTzpbP4RVSrpEikbmdJobCvhE3g==" crossorigin="anonymous" referrerpolicy="no-referrer">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.css" integrity="sha512-OTcub78R3msOCtY3Tc6FzeDJ8N9qvQn1Ph49ou13xgA9VsH9+LRxoFU6EqLhW4+PKRfU+/HReXmSZXHEkpYoOA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
   </head>
   <body>
-    <header class="header none">
+    <header class="header ">
       <div class="container">
         <!--весь контент внутри шапки-->
         <!--внутри контейнера создаю навигацию, навигация в header block top лежит-->
@@ -43,7 +43,7 @@
   <div class="header__text">
     <p>explore the beauty of god's earth in a beautiful forest and have fun </p>
   </div>
-  <a href="#!" class="header__btn">Explore Now</a>
+  <a href="#!" class="btn btn--header">Explore Now</a>
 </div>
       
         <!--img главное большое в header-->
@@ -51,10 +51,9 @@
 <img src="./img/header/header-img.png" alt="Image" />
       </div>
     </header>
-
     <!--делаю Choice Of -->
     <main>
-<section class="destinations none">
+<section class="destinations">
     <div class="container-right">
         <div class="destinations__row"><!--выравнять в одну линию-->
  <div class="destinations__content">
@@ -95,7 +94,7 @@
 </section>
 
 <!--What do customers say about us-->
-<section class="customers none">
+<section class="customers">
   <div class="container">
     <div class="customers__row"> <!--ряд-->
       <div class="customers__img">
@@ -130,7 +129,7 @@
 </section>
 
 <!--Start Exploring With Us-->
-<section class="cta none">
+<section class="cta">
   <div class="container">
     <div class="cta__plate">
    <h2 class="cta__title"> 
@@ -151,7 +150,7 @@
     <h2 class="subscribe__title"> Subscribe To Our Newsletter</h2>
       <form class="subscribe-form">
         <input type="email" class="subscribe-form__input" placeholder="Yourmail@mail.com">
-        <button class="btn">Subscribe</button><!--кнопку добавила-->
+        <button class="btn btn--subscribe">Subscribe</button><!--кнопку добавила-->
       </form>
 
     
@@ -168,8 +167,8 @@
       <h2 class="logo logo--footer"><a href="#!">GoTrip</a></h2>
     </div>
     
-    <ul class="nav__list">
-      <li><a href="#!" class="active">Home</a></li>
+    <ul class="nav__list nav__list--footer">
+      <li><a href="#!">Home</a></li>
       <!--она подчёркнута как линия-->
       <li><a href="#!">Services</a></li>
       <li><a href="#!"> Pricing</a></li>
@@ -177,18 +176,15 @@
     </ul>
     <ul class="nav__login">
       <li><a href="#!"> Sign up</a></li>
-      <li><a href="#!" class="btn">Login</a></li>
+      <li><a href="#!" class="btn btn--login">Login</a></li>
     </ul>
   </nav>
-
 </div>
-
     </footer>
 
 <!--jquery-->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js" integrity="sha512-aVKKRRi/Q/YV+4mjoKBsE4x3H+BkegoM/em46NNlCqNTmUYADjBbeNefNxYV7giUp0VxICtqdrbqU7iVaeZNXA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
  <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js" integrity="sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
- 
 <script src="./js/main.js"></script>
 </body>
 </html>

@@ -6,6 +6,7 @@
     --container-width: 1270px; /*ширина контейнера было 1240 взяла с запасом бо бокам*/
     --container-padding: 15px;
     --secondary: rgba(15, 31, 28, 0.5);
+    --orange: #ff7c4e;
 }
 
 body {
@@ -97,7 +98,11 @@ body {
     max-width: unset; /*не задано*/
     width: 894px;
     height: 940px;
-    pointer-events: none; /*none запрещает все параметры щелчка,*/
+    pointer-events: none; /*none запрещает все параметры щелчка нельзя скопировать картинку,*/
+}
+
+.header__img::after{
+    content: "";/*отобразила контент*/
 }
 
 /*nav */
@@ -137,6 +142,16 @@ body {
     border-radius: 50px;
 }
 
+.nav__list.nav__list--footer a.active::after,
+.nav__list.nav__list--footer a:hover::after {
+    display: none;
+}
+
+.nav__list.nav__list--footer a.active,
+.nav__list.nav__list--footer a:hover {
+    color: var(--orange);
+}
+
 .nav__login {
     display: flex;
     align-items: center;
@@ -155,35 +170,11 @@ body {
 }
 
 .logo a {
-    color: inherit; /*насследовать цвет*/
+    color: inherit !important; /*насследовать цвет*/
 }
 
-.logo--footer{
-    color: #ff7b4e;
-}
-
-/*button кнопка логин*/
-.btn {
-    display: inline-block; /*по умолчанию ссылка инлайн элемент*/
-    padding: 13px 44px; /*низ вверх 13 права лево 44*/
-
-    font-size: 15px;
-    font-weight: 500;
-    color: #ffffff;
-
-    background: linear-gradient(129.54deg, #ff7b4e 15.57%, #ff584e 95.03%), #ffffff;
-    border-radius: 100px;
-}
-
-.btn:hover {
-    color: rgb(221, 239, 66);
-    transition: color 0.2s ease-in; /*будет меняться плавно*/
-}
-
-.btn:active {
-    /*при нажатии утапливалась вниз эффект прожатия*/
-    position: relative;
-    top: 1px;
+.logo--footer {
+    color: var(--orange);
 }
 
 /*Header content*/
@@ -206,29 +197,6 @@ body {
     font-size: 25px;
     font-weight: 700;
     color: rgba(255, 255, 255, 0.5);
-}
-
-.header__btn {
-    display: inline-block;
-    padding: 27px 48px;
-    color: #fefefe;
-
-    background: linear-gradient(129.54deg, #ff7b4e 15.57%, #ff584e 95.03%);
-    border-radius: 27px;
-
-    font-size: 25px;
-    font-weight: 600;
-}
-
-.header__btn:hover {
-    color: rgb(221, 239, 66);
-    transition: color 0.2s ease-in; /*будет меняться плавно*/
-}
-
-.header__btn:active {
-    /*при нажатии утапливалась вниз эффект прожатия*/
-    position: relative;
-    top: 1px;
 }
 
 /*Destinations делаю c Choice Of*/
@@ -361,8 +329,7 @@ body {
 .customers__img img {
     border-radius: 60px;
 }
-.customers__content {
-}
+
 .customers__title {
     margin-bottom: 35px;
     font-size: 45px;
@@ -479,7 +446,7 @@ body {
     margin-bottom: 60px;
 }
 .subscribe-form {
-    padding: 12px 15px 12px 46px;/*12 верх низ 15 право 46лево*/
+    padding: 12px 15px 12px 46px; /*12 верх низ 15 право 46лево*/
     background-color: #fff;
     border-radius: 35px;
     display: flex;
@@ -489,8 +456,60 @@ body {
 .subscribe-form__input {
     font-weight: 500;
     font-size: 24px;
-  }
-  .subscribe-form__input::placeholder {
+}
+.subscribe-form__input::placeholder {
     color: var(--secondary);
-  }
+}
 
+/*FOOTER*/
+.footer {
+    padding: 56px 0 74px; /*верх56 лево право 0 низ 74*/
+}
+
+.footer a {
+    color: var(--secondary);
+}
+
+
+/*Buttons*/
+.btn {
+	display: inline-block;
+	padding: 25px 45px;
+    color: #fff !important;
+
+	background: linear-gradient(129.54deg, #ff7b4e 15.57%, #ff584e 95.03%);
+	border-radius: 27px;
+
+	font-size: 20px;
+	font-weight: 600;
+}
+
+.btn:hover {
+	color: rgb(245, 233, 127) !important;
+	transition: color 0.2s ease-in; /*будет меняться плавно*/
+}
+
+.btn:active {
+     /*при нажатии утапливалась вниз эффект прожатия*/
+    position: relative;
+	position: relative;
+	top: 1px;
+}
+
+.btn--login {
+    padding: 13px 44px;
+    font-size: 15px;
+    font-weight: 500;
+    border-radius: 100px;
+}
+
+.btn--header{
+    padding: 27px 48px;
+font-size: 25px;
+}
+
+.btn--subscribe{
+    padding: 36px 86px;
+  font-size: 25px;
+  border-radius: 35px;
+}
